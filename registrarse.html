@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Rincon-Gamer</title>
+    <link rel="stylesheet" href="./style.css">
+    <link rel="stylesheet" href="./style-2.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Oswald:wght@200;300;400&display=swap" rel="stylesheet">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Rubik+Moonrocks&display=swap" rel="stylesheet">
+</head>
+
+
+
+<div class="contenedor">
+    
+    
+    <header>
+        <div class="logo">
+            <img src="/logo.jpg" width="180" alt="">
+            <a href="#">RINCON GAMER</a>
+        </div>
+        
+        <nav>
+            <a href="./index.html">Inicio</a>
+            <a href="./registrarse.html">Registro</a>
+            <a class="link-with-menu" href="#">Noticias
+                <div class="sub-menu">
+                    <span href="#">PS4</span>
+                    <span href="#">Xbox</span>
+                    <span href="#">PC</span>
+                </div>
+
+            </a>
+            <a href="#">Contacto</a>
+        </nav>
+    </header>
+<hr>
+
+    <div class="whatsapp-container">
+        <a href="https://walink.co/6dac1a" >
+            <img class="whatsapp-icon" src="https://seeklogo.com/images/W/whatsapp-icon-logo-8CA4FB831E-seeklogo.com.png" alt="logo whatsapp">
+        </a>
+        
+    </div>
+
+
+        <main>
+            <section class="caja-registro"  id="forms">
+                <hr>
+                <div>
+                <form>
+                    <h3>Formulario de registro de usuario</h3>
+    
+                    <p>
+                        <label for="fullName">Nombre completo</label>
+                        <input type="text" id="fullName" placeholder="Ruben Perez" name="fullName" value="Nombre" required minlength="10" maxlength="40"/>
+                    </p>
+    
+                    <p>
+                        <label for="emailInput">Email</label>
+                        <input type="email" placeholder="pepito@gmail.com" id="emailInput" name="email" required>
+                    </p>
+                    
+                    <p>
+                        <label for="passwordInput">Contraseña</label>
+                        <input type="password" id="passwordInput" name="password">
+                    </p>
+    
+                    <p>
+                        <label for="ageInput">Edad</label>
+                        <input type="number" id="ageInput" name="age" min="12" max="120" step="5" required>
+                    </p>
+    
+                    <p>
+                        <label for="bornDate">Fecha de nacimiento</label>
+                        <input type="date" name="bornDate" id="bornDate" min="2022-06-06" required>
+                    </p>
+                    <p>
+                        Pais de origen <input type="text" list="country" name="countrySearch">
+                            <datalist id="country">
+                                <option value="Argentina">
+                                <option value="Brasil">
+                                <option value="Uruguay">
+                                <option value="Paraguay">
+                                <option value="Bolivia">
+                                <option value="Chile">
+                                <option value="Peru">
+                            </datalist>
+    
+                    </p>
+                    <p>
+                        <label for="">Seleccionar temas de interes</label> <br>
+                        <input type="checkbox" name="interest"> Tecnologia <br>
+                        <input type="checkbox" name="interest"> Noticias <br>
+                        <input type="checkbox" name="interest"> Gaming <br>
+                        <input type="checkbox" name="interest"> Entretenimiento <br>
+    
+                    </p>
+    
+                    <p>
+                        <label for="">Seleccione Genero</label> <br>
+                        <input type="radio" name="gender" > Mujer <br>
+                        <input type="radio" name="gender" > Hombre <br>
+                        <input type="radio" name="gender" > Otro <br>
+    
+                    </p>
+    
+                    <p>
+                        <label for=""> Nivel de Gamer</label>
+                        <br>
+                        <input type="range" name="knowledge" min="0" max="10" value="2">
+    
+                    </p>
+    
+                    <p>
+                        <label for="avatar">Cargar imagen de perfil</label>
+                        <input type="file" name="avatar" id="avatar" accept="image/*">
+    
+                    </p>
+    
+                    <button>REGISTRAR</button>
+                    <hr>
+                </div>
+
+
+
+
+
+    </section>
+
+</div>
+</html>

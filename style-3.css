@@ -1,0 +1,288 @@
+body {
+    background-image: linear-gradient(to right, black,rgb(104, 30, 30),red,rgb(104, 30, 30), black);
+}
+
+/*CABECERA*/
+
+
+header {
+	background:#fff;
+	width:150%;
+	padding:20px;
+
+	/* Flexbox */
+	display: flex;
+	justify-content:space-between;
+	align-items:center;
+
+	flex-direction:row;
+	flex-wrap:wrap;
+}
+
+header .logo {
+	color: transparent;
+	font-size:40px;
+}
+
+header .logo img {
+	width:70px;
+	vertical-align: baseline;
+}
+
+header .logo a {
+	color:rgb(8, 7, 7);
+	text-decoration: none;
+	line-height:50px;
+    font-family: 'Rubik Moonrocks', cursive;
+}
+
+header nav {
+    float: right;
+    line-height: 200px;
+	width:50%;
+	/* Flexbox */
+
+	display:flex;
+	flex-wrap:wrap;
+	align-items:center;
+}
+
+
+header nav a{
+    display: inline-block;
+    color:  rgb(17, 16, 16);
+    text-decoration: none;
+    padding: 10px 20px;
+    line-height: normal;
+    font-size: 20px;
+    font-weight: bold;
+    -webkit-transition: all 500ms ease;
+    -o-transition: all 500ms ease ;
+    transition: all 500ms ease;
+}
+
+header nav a:hover {
+        background: #f53a3a;
+        border-radius: 50px;
+    }
+
+.link-with-menu {
+    position: relative;
+
+}
+
+.sub-menu {
+    position: absolute;
+    top: 55px;
+    background-color: rgba(122, 122, 122, .5);
+    padding: 1rem;
+    left: 0;
+    display: none;
+	z-index: 1;
+	border: 1px groove;
+}
+
+.link-with-menu:hover .sub-menu {
+    display: block;
+}
+
+.sub-menu span {
+    padding: .5rem 1rem;
+    display: inline-block;
+}
+.sub-menu span:hover {
+	background: #f53a3a;
+	border-radius: 40px;
+}
+
+
+
+    /*BANNER*/
+.banner {
+    background-color: #fff;
+    position: relative;
+}
+
+.banner-img {
+    width: 100%;
+    height: 500px;
+    object-fit: cover;
+    object-position: bottom;
+    position: relative;
+}
+
+.banner-text {
+    padding: 0 30px;
+    position: absolute;
+    left: 0px;
+    bottom: 20px;
+    width: 50%;
+    color: white;
+    background-color: rgba(155, 155, 155, .2);
+}
+
+
+
+/*Logo Whatsapp*/
+.whatsapp-container {
+    position: fixed;
+    right: 20px;
+    bottom: 20px;
+}
+
+.whatsapp-icon {
+    width: 70px;
+    height: 70px;
+}
+
+
+
+.h2Principal{
+    margin-bottom: 50px;
+}
+
+.map-icon-tuc-esp{
+margin-top: 20px;
+margin-bottom: 10px;
+}
+
+.map-icon-tuc-esp2{
+    margin-top: 20px;
+    margin-bottom: 10px;
+    }
+
+
+.tel-icon-tuc-esp1{
+    margin-top: 20px;
+margin-bottom: 20px;
+}
+
+.tel-icon-tuc-esp2{
+    margin-top: 20px;
+margin-bottom: 20px;
+}
+
+/*MAIN*/
+
+
+
+.main {
+	background:#fff;
+	padding:20px;
+
+	flex:1 1 70%;
+	/*flex:1;*/
+}
+
+.main article {
+	margin-bottom: 20px;
+	padding-bottom:20px;
+	border-bottom:1px solid #000;
+}
+
+.main article:nth-last-child(1){
+	margin-bottom: 0;
+	padding-bottom: 0;
+	border-bottom:none;
+} 
+
+/*FOOTER*/
+
+footer {
+	background:#2c3e50;
+	width: 100%;
+	padding:20px;
+
+	/* Flexbox */
+	display: flex;
+	flex-wrap:wrap;
+	justify-content:space-between;
+}
+
+footer .links {
+	background:#a12214;
+	display:flex;
+	flex-wrap:wrap;
+}
+
+footer .links a {
+	flex-grow:1;
+
+	color:#fff;
+	padding:10px;
+	text-align: center;
+	text-decoration:none;
+}
+
+footer .links a:hover {
+	background:#8d271c;
+}
+
+footer .social {
+	background:none;
+}
+
+footer .social a {
+	padding: 10px;
+	text-decoration: none;
+	font-size: 30px;
+
+}
+
+
+footer .links-pages a {
+	display: inline-block;
+	justify-content: space-between;
+	color: #fff;
+	text-decoration: none;
+	text-align: center;
+	flex-wrap: wrap;
+	margin-top: 10px;
+	padding: 8px;
+
+}
+	
+	footer .links-pages a:hover {
+		background: #f53a3a ;
+		border-radius: 40px;
+}
+
+
+
+@media screen and (max-width: 800px) {
+	.contenedor {
+		flex-direction:column;
+	}
+
+	header {
+		flex-direction:column;
+		padding:0;
+	}
+
+	header .logo {
+		margin:20px 0;
+	}
+
+	header nav {
+		width: 100%;
+	}
+
+	aside {
+		flex-direction:row;
+		flex:0;
+	}
+
+	aside .widget {
+		flex-grow:1;
+	}
+}
+
+@media screen and (max-width: 600px) {
+	aside {
+		flex-direction:column;
+	}
+
+	footer {
+		justify-content:space-around;
+	}
+}

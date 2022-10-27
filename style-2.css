@@ -1,0 +1,207 @@
+* {
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+}
+
+html {
+    height: 150%;
+}
+.contenedor {
+	background:transparent;
+	width:100%;
+	max-width:1000px;
+    height: 650px;
+	margin: auto;
+    font-family: 'Oswald', sans-serif;
+
+	/* Flexbox */
+	display:flex;
+	flex-flow:row wrap;
+}
+
+body {
+	background-image: linear-gradient(to right, black,rgb(104, 30, 30),red,rgb(104, 30, 30), black);
+}
+
+/*CABECERA*/
+
+
+header {
+	background:#fff;
+	width:150%;
+	padding:20px;
+
+	/* Flexbox */
+	display: flex;
+	justify-content:space-between;
+	align-items:center;
+
+	flex-direction:row;
+	flex-wrap:wrap;
+}
+
+header .logo {
+	color: transparent;
+	font-size:40px;
+}
+
+header .logo img {
+	width:70px;
+	vertical-align: baseline;
+}
+
+header .logo a {
+	color:rgb(8, 7, 7);
+	text-decoration: none;
+	line-height:50px;
+    font-family: 'Rubik Moonrocks', cursive;
+}
+
+header nav {
+    float: right;
+    line-height: 200px;
+	width:50%;
+	/* Flexbox */
+
+	display:flex;
+	flex-wrap:wrap;
+	align-items:center;
+}
+
+
+header nav a{
+    display: inline-block;
+    color:  rgb(17, 16, 16);
+    text-decoration: none;
+    padding: 10px 20px;
+    line-height: normal;
+    font-size: 20px;
+    font-weight: bold;
+    -webkit-transition: all 500ms ease;
+    -o-transition: all 500ms ease ;
+    transition: all 500ms ease;
+}
+
+header nav a:hover {
+        background: #f53a3a;
+        border-radius: 50px;
+    }
+
+
+	.link-with-menu {
+		position: relative;
+	
+	}
+	
+	.sub-menu {
+		position: absolute;
+		top: 55px;
+		background-color: rgba(122, 122, 122, .5);
+		padding: 1rem;
+		left: 0;
+		display: none;
+		z-index: 1;
+		border: 1px groove;
+	}
+	
+	.link-with-menu:hover .sub-menu {
+		display: block;
+	}
+	
+	.sub-menu span {
+		padding: .5rem 1rem;
+		display: inline-block;
+	}
+	.sub-menu span:hover {
+		background: #f53a3a;
+		border-radius: 40px;
+	}
+
+
+/*Logo Whatsapp*/
+.whatsapp-container {
+    position: fixed;
+    right: 20px;
+    bottom: 20px;
+}
+
+.whatsapp-icon {
+    width: 70px;
+    height: 70px;
+}
+
+
+
+/*MAIN*/
+
+
+
+.main {
+	background:#fff;
+	padding:20px;
+
+	flex:1 1 70%;
+	/*flex:1;*/
+}
+
+.main article {
+	margin-bottom: 20px;
+	padding-bottom:20px;
+	border-bottom:1px solid #000;
+}
+
+.main article:nth-last-child(1){
+	margin-bottom: 0;
+	padding-bottom: 0;
+	border-bottom:none;
+}
+
+@media screen and (max-width: 800px) {
+	.contenedor {
+		flex-direction:column;
+	}
+
+	header {
+		flex-direction:column;
+		padding:0;
+	}
+
+	header .logo {
+		margin:20px 0;
+	}
+
+	header nav {
+		width: 100%;
+	}
+
+	aside {
+		flex-direction:row;
+		flex:0;
+	}
+
+	aside .widget {
+		flex-grow:1;
+	}
+}
+
+@media screen and (max-width: 600px) {
+	aside {
+		flex-direction:column;
+	}
+
+	footer {
+		justify-content:space-around;
+	}
+}
+
+
+
+.caja-registro {
+    background-color: rgb(216, 224, 224);
+    position: relative;
+    border: 8px solid rgb(0, 0, 0);
+    text-align: center;
+    margin: 300px;
+    margin-top: 10px;
+}
