@@ -1,6 +1,26 @@
+* {
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+}
+
+.contenedor {
+	background:#fff;
+	width:210%;
+	max-width:1000px;
+	margin: auto;
+    font-family: 'Oswald', sans-serif;
+
+	/* Flexbox */
+	display:flex;
+	flex-flow:row wrap;
+}
+
 body {
     background-image: linear-gradient(to right, black,rgb(104, 30, 30),red,rgb(104, 30, 30), black);
 }
+	/*background-image:linear-gradient(to bottom right, #0a0a0a, #050505, #fffb02, rgb(240, 236, 0));/*
+}}
 
 /*CABECERA*/
 
@@ -137,31 +157,6 @@ header nav a:hover {
 
 
 
-.h2Principal{
-    margin-bottom: 50px;
-}
-
-.map-icon-tuc-esp{
-margin-top: 20px;
-margin-bottom: 10px;
-}
-
-.map-icon-tuc-esp2{
-    margin-top: 20px;
-    margin-bottom: 10px;
-    }
-
-
-.tel-icon-tuc-esp1{
-    margin-top: 20px;
-margin-bottom: 20px;
-}
-
-.tel-icon-tuc-esp2{
-    margin-top: 20px;
-margin-bottom: 20px;
-}
-
 /*MAIN*/
 
 
@@ -184,7 +179,38 @@ margin-bottom: 20px;
 	margin-bottom: 0;
 	padding-bottom: 0;
 	border-bottom:none;
-} 
+}
+
+
+
+/*ASIDE*/
+
+
+
+
+
+aside {
+	background:#2c3e50;
+	padding:20px;
+	/*FLEX*/
+	flex:1 1 30%;
+	/*flex:0 0 300px;*/
+
+	display: flex;
+	flex-wrap:wrap;
+	flex-direction:column;
+	justify-content:flex-start;
+}
+
+aside .widget {
+	background: #2c3e50;
+	height:150px;
+	margin:15px;
+}
+
+
+
+
 
 /*FOOTER*/
 
@@ -249,6 +275,10 @@ footer .links-pages a {
 
 
 
+
+
+
+
 @media screen and (max-width: 800px) {
 	.contenedor {
 		flex-direction:column;
@@ -286,3 +316,5 @@ footer .links-pages a {
 		justify-content:space-around;
 	}
 }
+
+

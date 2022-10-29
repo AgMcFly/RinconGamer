@@ -1,37 +1,19 @@
-* {
-	margin: 0;
-	padding: 0;
-	box-sizing: border-box;
-}
-
-html {
-    height: 610%;
-}
-.contenedor {
-	background:#fff;
-	width:210%;
-	max-width:1000px;
-	margin: auto;
-    font-family: 'Oswald', sans-serif;
-
-	/* Flexbox */
-	display:flex;
-	flex-flow:row wrap;
-}
-
 body {
-    background-image: linear-gradient(to right, black,rgb(104, 30, 30),red,rgb(104, 30, 30), black);
+    background-color: #c7c7c7;
+	font-family: 'Oswald', sans-serif;
 }
-	/*background-image:linear-gradient(to bottom right, #0a0a0a, #050505, #fffb02, rgb(240, 236, 0));/*
-}}
+.contenedor { background-color: #c7c7c7; 
+
+}
 
 /*CABECERA*/
 
 
 header {
-	background:#fff;
-	width:150%;
+	background:#c7c7c7;
+	width:100%;
 	padding:20px;
+	margin-bottom: 20px;
 
 	/* Flexbox */
 	display: flex;
@@ -144,21 +126,26 @@ header nav a:hover {
     background-color: rgba(155, 155, 155, .2);
 }
 
-
-
-/*Logo Whatsapp*/
-.whatsapp-container {
-    position: fixed;
-    right: 20px;
-    bottom: 20px;
+.map-icon-tuc-esp{
+margin-top: 20px;
+margin-bottom: 10px;
 }
 
-.whatsapp-icon {
-    width: 70px;
-    height: 70px;
+.map-icon-tuc-esp2{
+    margin-top: 20px;
+    margin-bottom: 10px;
+    }
+
+
+.tel-icon-tuc-esp1{
+    margin-top: 20px;
+margin-bottom: 20px;
 }
 
-
+.tel-icon-tuc-esp2{
+    margin-top: 20px;
+margin-bottom: 20px;
+}
 
 /*MAIN*/
 
@@ -182,43 +169,12 @@ header nav a:hover {
 	margin-bottom: 0;
 	padding-bottom: 0;
 	border-bottom:none;
-}
-
-
-
-/*ASIDE*/
-
-
-
-
-
-aside {
-	background:#2c3e50;
-	padding:20px;
-	/*FLEX*/
-	flex:1 1 30%;
-	/*flex:0 0 300px;*/
-
-	display: flex;
-	flex-wrap:wrap;
-	flex-direction:column;
-	justify-content:flex-start;
-}
-
-aside .widget {
-	background: #2c3e50;
-	height:150px;
-	margin:15px;
-}
-
-
-
-
+} 
 
 /*FOOTER*/
 
 footer {
-	background:#2c3e50;
+	background:#c7c7c7;
 	width: 100%;
 	padding:20px;
 
@@ -278,10 +234,6 @@ footer .links-pages a {
 
 
 
-
-
-
-
 @media screen and (max-width: 800px) {
 	.contenedor {
 		flex-direction:column;
@@ -319,5 +271,3 @@ footer .links-pages a {
 		justify-content:space-around;
 	}
 }
-
-
