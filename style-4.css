@@ -7,8 +7,8 @@ body {
 
 header {
 	background:#fff;
-	width:150%;
-	padding:20px;
+	width:100%;
+    justify-content: space-evenly;
 
 	/* Flexbox */
 	display: flex;
@@ -59,6 +59,7 @@ header nav a{
     -webkit-transition: all 500ms ease;
     -o-transition: all 500ms ease ;
     transition: all 500ms ease;
+    justify-content: space-between;
 }
 
 header nav a:hover {
@@ -137,30 +138,25 @@ header nav a:hover {
 
 
 
-.h2Principal{
-    margin-bottom: 50px;
-}
 
-.map-icon-tuc-esp{
-margin-top: 20px;
-margin-bottom: 10px;
-}
-
-.map-icon-tuc-esp2{
-    margin-top: 20px;
-    margin-bottom: 10px;
-    }
-
-
-.tel-icon-tuc-esp1{
-    margin-top: 20px;
-margin-bottom: 20px;
-}
-
-.tel-icon-tuc-esp2{
-    margin-top: 20px;
-margin-bottom: 20px;
-}
+.youDied-img{
+    position: relative;
+     width: 70%;
+     left: 13%;
+     top: -25px;
+     border: 5px solid rgb(153, 26, 26);
+ }
+ 
+ 
+ .text-404{
+     text-align: center;
+     position: relative;
+     top: 200px;
+     left: -50px;
+     z-index: 1000;
+ color: rgb(255, 255, 255);
+ text-shadow:black 50cm;
+ }
 
 /*MAIN*/
 
@@ -197,6 +193,7 @@ footer {
 	display: flex;
 	flex-wrap:wrap;
 	justify-content:space-between;
+    bottom: 0px;
 }
 
 footer .links {
@@ -286,4 +283,3 @@ footer .links-pages a {
 		justify-content:space-around;
 	}
 }
-
