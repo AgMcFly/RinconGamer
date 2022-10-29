@@ -7,7 +7,7 @@ body {
 
 header {
 	background:#fff;
-	width:100%;
+	width:auto;
     justify-content: space-evenly;
 
 	/* Flexbox */
@@ -37,9 +37,8 @@ header .logo a {
 }
 
 header nav {
-    float: right;
     line-height: 200px;
-	width:50%;
+	width:auto;
 	/* Flexbox */
 
 	display:flex;
@@ -122,21 +121,17 @@ header nav a:hover {
     background-color: rgba(155, 155, 155, .2);
 }
 
-
-
 /*Logo Whatsapp*/
 .whatsapp-container {
     position: fixed;
     right: 20px;
-    bottom: 20px;
+    bottom: 100px;
 }
 
 .whatsapp-icon {
     width: 70px;
     height: 70px;
 }
-
-
 
 
 .youDied-img{
@@ -151,11 +146,12 @@ header nav a:hover {
  .text-404{
      text-align: center;
      position: relative;
-     top: 200px;
-     left: -50px;
+     top:80px;
+     left: -25px;
      z-index: 1000;
  color: rgb(255, 255, 255);
- text-shadow:black 50cm;
+ text-shadow: 5px 5px rgb(0, 0, 0);
+ font-size: 50px;
  }
 
 /*MAIN*/
@@ -188,12 +184,13 @@ footer {
 	background:#2c3e50;
 	width: 100%;
 	padding:20px;
+	position: relative;
+
 
 	/* Flexbox */
 	display: flex;
 	flex-wrap:wrap;
 	justify-content:space-between;
-    bottom: 0px;
 }
 
 footer .links {
@@ -280,6 +277,117 @@ footer .links-pages a {
 	}
 
 	footer {
-		justify-content:space-around;
+
 	}
 }
+
+@media screen and (max-width:1100px){
+	.banner-img {
+		width: 100%;
+		height: 300px;
+		object-fit: cover;
+		object-position: bottom;
+		position: relative;
+		top:10px
+	}
+}
+
+
+@media screen and (max-width:950px) {
+	
+
+.text-404{
+	text-align: center;
+	position: relative;
+	top:80px;
+	left: -25px;
+	z-index: 1000;
+color: rgb(255, 255, 255);
+text-shadow: 5px 5px rgb(0, 0, 0);
+font-size: 30px;
+}}
+
+@media screen and (max-width:850px) {
+	
+
+	.text-404{
+		text-align: center;
+		position: relative;
+		top:50px;
+		left: -5px;
+		z-index: 1000;
+	color: rgb(255, 255, 255);
+	text-shadow: 5px 5px rgb(0, 0, 0);
+	font-size: 25px;
+	}}
+
+	@media screen and (max-width:1093px) {
+	footer {
+	background:#2c3e50;
+	width: 100%;
+	padding:20px;
+	position: relative;
+	bottom: -20px;
+	
+
+	/* Flexbox */
+	display: flex;
+	flex-wrap:wrap;
+	justify-content:space-between;
+}}
+
+@media screen and (max-width:967px) {
+	footer {
+	background:#2c3e50;
+	width: 100%;
+	padding:20px;
+	position: relative;
+	bottom: -50px;
+	
+
+	/* Flexbox */
+	display: flex;
+	flex-wrap:wrap;
+	justify-content:space-between;
+}}
+
+
+
+@media screen and (min-width:100px) {
+	footer {
+	background:#2c3e50;
+	width: 100%;
+	padding:20px;
+	position: relative;
+	bottom: -60px;
+	
+
+	/* Flexbox */
+	display: flex;
+	flex-wrap:wrap;
+	justify-content:space-between;
+}}
+
+@media screen and (max-width:1000px) {
+.youDied-img{
+    position: relative;
+     width: 75%;
+     left: 13%;
+     top: -5px;
+     border: 5px solid rgb(153, 26, 26);
+ }}
+
+
+ @media screen and (max-width:700px) {
+ /*Logo Whatsapp*/
+.whatsapp-container {
+    position: fixed;
+    right: 20px;
+    bottom: 150px;
+}}
+
+@media screen and (max-width:700px) {
+.whatsapp-icon {
+    width: 50px;
+    height: 50px;
+}}
