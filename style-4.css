@@ -275,11 +275,8 @@ footer .links-pages a {
 	aside {
 		flex-direction:column;
 	}
-
-	footer {
-
 	}
-}
+
 
 @media screen and (max-width:1100px){
 	.banner-img {
