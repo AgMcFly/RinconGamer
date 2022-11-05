@@ -5,15 +5,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Rincon-Gamer</title>
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Oswald:wght@200;300;400&display=swap" rel="stylesheet">
-<link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Rubik+Moonrocks&display=swap" rel="stylesheet">
-<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.4.0/css/font-awesome.min.css">
-<link rel='stylesheet' href='https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css'>
+    <link rel="stylesheet" href="/Administrador/adminStyle.css">
 <!-- CSS only -->
 <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/css/bootstrap.min.css" rel="stylesheet" 
 integrity="sha384-Zenh87qX5JnK2Jl0vWa8Ck2rdkQ2Bzep5IDxbcnCeuOxjzrPF/et3URy9Bv1WTRi" crossorigin="anonymous">
@@ -22,17 +14,15 @@ integrity="sha384-Zenh87qX5JnK2Jl0vWa8Ck2rdkQ2Bzep5IDxbcnCeuOxjzrPF/et3URy9Bv1WT
 
 <body>
 
-<main class="container-xxl">
-
-    <h1>Cargar noticias</h1>
-
-    <div class="row">
+<main class="container-fluid">
+<div class="row">
         <div class="col-6">
+          <h1>Cargar noticias</h1>
 
 <form class="mb-3 needs-validation row" id="cargarNoticiasForm">
-    <div class="col-12 col-md-6 mb-3">
-        <label for="noticiaCargada" class="form-label">Título de la noticia</label>
-        <input name="título" type="text" class="form-control" id="noticiaCargada" required minlength="15" max="100"> 
+    <div class="col-md-6 col-md-6 mb-3">
+        <label for="título" class="form-label">Título de la noticia</label>
+        <input name="título" type="text" class="form-control" id="título" required minlength="15" max="100"> 
         <div class="valid-feedback">
           Parece un buen título!
         </div>
@@ -86,31 +76,54 @@ integrity="sha384-Zenh87qX5JnK2Jl0vWa8Ck2rdkQ2Bzep5IDxbcnCeuOxjzrPF/et3URy9Bv1WT
       </div>
       </div>
 
-    <div class="d-grid gap-2 d-md-block">
+      <form class="mb-3 needs-validation row" id="cargarNoticiasForm">
+        <select class="form-select" aria-label="Default select example" id="género">
+          <option selected>Seleccion género del juego</option>
+          <option value="Acción">Acción</option>
+          <option value="Terror">Terror</option>
+          <option value="Aventura">Aventura</option>
+          <option value="Estrategia">Estrategia</option>
+          <option value="RPG">RPG</option>
+          <option value="Narrativo">Narrativo</option>
+          <option value="Plataforma">Plataforma</option>
+        </select>
+
+    <div class="d-grid gap-2 mt-3 d-md-block">
         <button type="submit" class="btn btn-danger">Cargar noticia</button>
+      </div>
       </div>
 
 
+
 </form>
-
-
-
-
-
-
-</div>
 </div>
 
-
-
-
-
-
-
-
-
-
-
+<div class="col-6">
+  <table class="table table-dark table-striped">
+<thead>
+<tr>
+<th scope="col">Imagen</th>
+<th scope="col">Título</th>
+<th scope="col">Cuerpo</th>
+<th scope="col">Descripción</th>
+<th scope="col">Noticia</th>
+<th scope="col">Reseña</th>
+<th scope="col">Género del juego</th>
+</tr>
+</thead>
+<tbody id="table-body">
+<!-- <tr>
+<td>imagen</td>
+<td>Titular</td>
+<td>alguna Descripción</td>
+<td>Descripción</td>
+<td>Noticia</td>
+<td>Reseña</td>
+<td>Género del juego</td>
+</tr> -->
+</tbody>
+</table>
+</div>
 </main>
 
 
@@ -121,7 +134,8 @@ integrity="sha384-Zenh87qX5JnK2Jl0vWa8Ck2rdkQ2Bzep5IDxbcnCeuOxjzrPF/et3URy9Bv1WT
 
 
 
-<script src="/Administrador/noticias.js"></script>
+
+
     <!-- JavaScript Bundle with Popper -->
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-OERcA2EqjJCMA+/3y+gxIOqMEjwtxJY7qPCqsdltbNJuaOe923+mo//f6V8Qbsw3" crossorigin="anonymous"></script>
 <script>
@@ -145,5 +159,7 @@ integrity="sha384-Zenh87qX5JnK2Jl0vWa8Ck2rdkQ2Bzep5IDxbcnCeuOxjzrPF/et3URy9Bv1WT
   })
 })()
 </script>
+<!-- <script src="/Administrador/noticiasCargadas.js" type="module"></script> -->
+<script src="/Administrador/listaNoticias.js"></script>
 </body>
 </html>
