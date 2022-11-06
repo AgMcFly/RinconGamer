@@ -19,7 +19,7 @@ integrity="sha384-Zenh87qX5JnK2Jl0vWa8Ck2rdkQ2Bzep5IDxbcnCeuOxjzrPF/et3URy9Bv1WT
         <div class="col-6">
           <h1>Cargar noticias</h1>
 
-<form class="mb-3 needs-validation row" id="cargarNoticiasForm">
+<form class="mb-3 needs-validation row" id="cargarNoticiasForm" novalidate>
     <div class="col-md-6 col-md-6 mb-3">
         <label for="título" class="form-label">Título de la noticia</label>
         <input name="título" type="text" class="form-control" id="título" required minlength="15" max="100"> 
@@ -54,31 +54,17 @@ integrity="sha384-Zenh87qX5JnK2Jl0vWa8Ck2rdkQ2Bzep5IDxbcnCeuOxjzrPF/et3URy9Bv1WT
       </div>
 
 
-    <div class="col-12 mt-3 mb-3">
-    <label class="mb-3" for="tipoNoticia">Categoría de la información</label>
-    <div class="form-check mb-3">
-        <label class="form-check-label" for="tipoNoticia">
-        <input class="form-check-input" type="checkbox" name="tipo" id="tipoNoticia">
-          Noticias
-        </label>
-      </div>
-      <div class="form-check mb-3">
-        <input class="form-check-input" type="checkbox" name="tipo" id="tipoReseña" checked>
-        <label class="form-check-label" for="tipoReseña">
-          Reseñas
-        </label>
-      </div>
-      <div class="form-check mb-3">
-        <input class="form-check-input" type="checkbox" name="tipo" id="tipoDescripción">
-        <label class="form-check-label" for="tipoDescripción">
-          Descripción
-        </label>
-      </div>
-      </div>
+    <div class="col-12 mb-3">
+    <select class="form-select mb-3" aria-label="Default select example" name="categoría" id="categoría">
+      <option selected>Categoría de información</option>
+      <option value="Noticia">Noticia</option>
+      <option value="Reseña">Reseña</option>
+      <option value="Descripción">Descripción</option>
+    </select>
 
       <form class="mb-3 needs-validation row" id="cargarNoticiasForm">
         <select class="form-select" aria-label="Default select example" id="género">
-          <option selected>Seleccion género del juego</option>
+          <option selected>Selecciona el género del juego</option>
           <option value="Acción">Acción</option>
           <option value="Terror">Terror</option>
           <option value="Aventura">Aventura</option>
@@ -87,6 +73,14 @@ integrity="sha384-Zenh87qX5JnK2Jl0vWa8Ck2rdkQ2Bzep5IDxbcnCeuOxjzrPF/et3URy9Bv1WT
           <option value="Narrativo">Narrativo</option>
           <option value="Plataforma">Plataforma</option>
         </select>
+
+        <form class="mb-3 needs-validation row" id="cargarNoticiasForm">
+          <div class="form-check mt-3">
+            <input name="Favorito" class="form-check-input" type="checkbox" value="" id="flexCheckDefault">
+            <label class="form-check-label" for="flexCheckDefault">
+              Favorito
+            </label>
+          </div>
 
     <div class="d-grid gap-2 mt-3 d-md-block">
         <button type="submit" class="btn btn-danger">Cargar noticia</button>
@@ -105,10 +99,10 @@ integrity="sha384-Zenh87qX5JnK2Jl0vWa8Ck2rdkQ2Bzep5IDxbcnCeuOxjzrPF/et3URy9Bv1WT
 <th scope="col">Imagen</th>
 <th scope="col">Título</th>
 <th scope="col">Cuerpo</th>
-<th scope="col">Descripción</th>
-<th scope="col">Noticia</th>
-<th scope="col">Reseña</th>
+<th scope="col">Categoría de información</th>
 <th scope="col">Género del juego</th>
+<th scope="col">Favorito</th>
+<th scope="col">Edición</th>
 </tr>
 </thead>
 <tbody id="table-body">
@@ -116,10 +110,10 @@ integrity="sha384-Zenh87qX5JnK2Jl0vWa8Ck2rdkQ2Bzep5IDxbcnCeuOxjzrPF/et3URy9Bv1WT
 <td>imagen</td>
 <td>Titular</td>
 <td>alguna Descripción</td>
-<td>Descripción</td>
-<td>Noticia</td>
-<td>Reseña</td>
+<td>Categoría de información</td>
 <td>Género del juego</td>
+<td>Favorito</td>
+<td>Edición</td>
 </tr> -->
 </tbody>
 </table>

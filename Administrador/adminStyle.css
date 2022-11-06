@@ -2,3 +2,15 @@
     width: 150px;
     object-fit: cover;
 }
+
+.cuerpoNoticia{
+    overflow: hidden;
+width:115px;
+display: -webkit-box;
+-webkit-line-clamp: 4;
+-webkit-box-orient: vertical;
+}
+
+.fa-star{
+    padding: 20px;
+}

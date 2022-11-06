@@ -1,35 +1,45 @@
-// import {noticias} from "./noticiasCargadas.js";
-
-const noticias = JSON.parse(localStorage.getItem("noticias"))
+// import {noticias} from "./noticiasCargadas.js"
+const noticias = JSON.parse(localStorage.getItem("noticias")) || []
+//obteniendo el elemento table body
 const tableBodyHTML = document.getElementById ("table-body")
 console.log(tableBodyHTML) 
-
+//obteniendo el formulario
 function renderProductos() {
+    //reseteamos el formulario, para que no se apilen las noticias
     tableBodyHTML.innerHTML = "";
-    noticias.forEach (elem => {
+    //iteramos el formulario por las noticias
+    noticias.forEach ((elem, index) => {
         tableBodyHTML.innerHTML += `<tr> 
         <td>
         <img class ="table-image" src= ${elem.imagen}></img>
          </td>
          <td>${elem.título}</td>
-        <td>${elem.descripción}</td>
-        <td>${elem.tipoDescripción}</td>
-         <td>${elem.tipoNoticia}</td>
-        <td>${elem.tipoReseña}</td>
+        <td class ="cuerpoNoticia">${elem.descripción}</td>
+        <td>${elem.categoría}</td>
         <td>${elem.Género}</td>
+        <td>${elem.Favorito ? `<i class="fa-solid fa-star"></i>` : `<i class="fa-regular fa-star"></i>`}
+        </td>}
+        <td>
+        <div class="d-flex">
+        <button class="btn btn-danger p-1 me-2" onclick="borrarNoticia(${index})"><i class="fa-solid fa-trash"></i></button>
+        <button class="btn btn-success p-1" onclick="editarNoticia(${index})"><i class="fa-solid fa-file-pen"></i>
+        </button>
+        </div>
+        </td>
         </tr>`
          }
          ) 
 }
- 
+ //renderizando el formulario dinámicamente
 renderProductos()
 
-
+//la tabla de noticias cargadas 
 const agregarNoticias = document.getElementById ("cargarNoticiasForm")
-
+//freno la ejecución de la función callback del evento submit
 cargarNoticiasForm.addEventListener("submit", (evt)=> {
     if(cargarNoticiasForm.checkValidity()===false){
         return}
+//prevengo el comportamiento del formulario por defecto
 evt.preventDefault();
 alert("Noticia cargada")
 const formEl = evt.target.elements;
@@ -38,10 +48,9 @@ let nuevaNoticia = {
     título: formEl.título.value, 
     descripción: formEl.cuerpo.value,
     imagen:  formEl.imagen.value,
-    tipoDescripción: formEl.tipoDescripción.checked,
-    tipoNoticia: formEl.tipoNoticia.checked,
-    tipoReseña: formEl.tipoReseña.checked,
-    Género: formEl.género.value
+    categoría: formEl.categoría.value,
+    Género: formEl.género.value,
+    Favorito: formEl.Favorito.checked 
 }
 
 //añadida una nueva noticia
@@ -61,6 +70,36 @@ const títuloInput = document.getElementById("título")
 títuloInput.focus()
 })
 
+function borrarNoticia(idx) {
+    noticias.splice(idx,1);
+    localStorage.setItem("noticias",JSON.stringify(noticias));
+    renderProductos();
+}
+//Función recibe un parámetro del elemento a editar
+function editarNoticia(idx){
+    const noticiaAEditar = noticias[idx]
+//Obtengo los inputs elementos del formulario
+    const formEl = cargarNoticiasForm.elements
+//Relleno los valores de los inputs con los valores a editar
+    formEl.título.value = noticiaAEditar.título;
+    formEl.cuerpo.value = noticiaAEditar.cuerpo;
+    formEl.imagen.value = noticiaAEditar.imagen;
+    formEl.categoría.value = noticiaAEditar.categoría;
+    formEl.género.value = noticiaAEditar.género;
+    formEl.Favorito.checked = noticiaAEditar.favorito;
+
+cargarNoticiasForm.setAttribute("edit",idx)
+
+if(cargarNoticiasForm.getAttribute("edit")){
+    const index = cargarNoticiasForm.getAttribute("edit")
+noticias[index] = nuevaNoticia;
+}
+else{
+    noticias.push(nuevaNoticia)
+}
+
+
+cargarNoticiasForm.removeAttribute("edit")}
 
 
     
