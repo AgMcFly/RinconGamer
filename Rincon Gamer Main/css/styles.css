@@ -98,6 +98,59 @@ body {
   font-family: 'Rubik Moonrocks', cursive;
 }
 
+.container .text-center {
+  margin-top: 22rem;
+}
+
+/* COMENTARIOS */
+.img-cliente{
+  object-fit: cover;
+  height: 300px;
+  width: 300px;
+  border-radius: 1rem;
+  border: 2px solid black;
+}
+
+.container-comentaries{
+  text-align: center;
+  margin-top: 140px;
+}
+
+.main-text {
+  font-size: 20px;
+}
+
+.tittle-car {
+  text-align: center;
+}
+
+.texto-comentarios-clientes, .nombre-clientes{
+  color: black;
+}
+
+.caja-comentarios{
+  color: black;
+  
+}
+.comentaries{
+  padding-top: 1rem;
+}
+
+/*FORMULARIO*/
+.box-form {
+  justify-content: center;
+  text-align: center;
+}
+
+@media screen and (max-width:768px) {
+  .logo-brand {
+      margin-left: 0;
+  }
+  .logo-brand img {
+      width: 50px;
+  }
+  
+}
 
 hr {
   margin: 1rem 0;
