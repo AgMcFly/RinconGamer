@@ -1,3 +1,4 @@
+
 const users = 
 // JSON.parse(localStorage.getItem("users")) || []
 [
@@ -23,6 +24,11 @@ const users =
     role: "ADMIN_ROLE"
 },
 ]
+
+if(!localStorage.getItem("users")) {
+    console.log(`entra`)
+    localStorage.setItem('users', JSON.stringify(users))
+}
 
 const loginForm = document.querySelector("#login-form");
 loginForm.addEventListener("submit", (evt)=>{
