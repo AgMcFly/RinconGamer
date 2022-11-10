@@ -53,13 +53,14 @@
   --bs-body-font-weight: 400;
   --bs-body-line-height: 1.5;
   --bs-body-color: #212529;
-  --bs-body-bg: #fff;
+  --bs-body-bg: #060610;
 }
 
 *,
 *::before,
 *::after {
   box-sizing: border-box;
+  font-family: 'Oswald', sans-serif;
 }
 
 @media (prefers-reduced-motion: no-preference) {
@@ -86,6 +87,7 @@ body {
   position: fixed;
   right: 20px;
   bottom: 20px;
+  z-index: 10;
 }
 
 .whatsapp-icon {
@@ -93,6 +95,63 @@ body {
   height: 70px;
 }
 
+.navbar-brand {
+  font-family: 'Rubik Moonrocks', cursive;
+}
+
+.container .text-center {
+  margin-top: 22rem;
+}
+
+/* COMENTARIOS */
+.img-cliente{
+  object-fit: cover;
+  height: 300px;
+  width: 300px;
+  border-radius: 1rem;
+  border: 2px solid black;
+}
+
+.container-comentaries{
+  text-align: center;
+  margin-top: 140px;
+}
+
+.main-text {
+  font-size: 20px;
+}
+
+.tittle-car {
+  text-align: center;
+}
+
+.texto-comentarios-clientes, .nombre-clientes{
+  color: black;
+}
+
+.caja-comentarios{
+  color: black;
+  
+}
+.comentaries{
+  padding-top: 1rem;
+}
+
+/*FORMULARIO*/
+.box-form {
+  justify-content: center;
+  text-align: center;
+}
+
+@media screen and (max-width:768px) {
+  .logo-brand {
+      margin-left: 0;
+  }
+  .logo-brand img {
+      width: 50px;
+  }
+  
+}
 
 hr {
   margin: 1rem 0;
@@ -3946,7 +4005,7 @@ textarea.form-control-lg {
 
 .nav-link {
   display: block;
-  padding: 0.5rem 1rem;
+  /* padding: 0.5rem 1rem; */
   color: #0d6efd;
   text-decoration: none;
   transition: color 0.15s ease-in-out, background-color 0.15s ease-in-out, border-color 0.15s ease-in-out;
@@ -4057,7 +4116,7 @@ textarea.form-control-lg {
   padding-top: 0.3125rem;
   padding-bottom: 0.3125rem;
   margin-right: 1rem;
-  font-size: 1.25rem;
+  font-size: 40px;
   text-decoration: none;
   white-space: nowrap;
 }
@@ -5993,6 +6052,7 @@ textarea.form-control-lg {
 
 .carousel {
   position: relative;
+  margin-bottom: 20px;
 }
 
 .carousel.pointer-event {
