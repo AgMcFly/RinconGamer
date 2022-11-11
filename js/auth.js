@@ -11,12 +11,16 @@ if (usuarioLogeado){
 }
 else{
     logged.innerHTML = `
-   <a class="nav-link active" aria-current="page" href="/startbootstrap-blog-home-gh-pages/login.html">
+   <a class="nav-link active" aria-current="page" href="/login.html">
     Login
     </a>`
 }
 }
+
+
 chequearLogin();
+
+
 
 
 function logout() {
@@ -24,3 +28,4 @@ function logout() {
     localStorage.removeItem("currentUser")
     chequearLogin()
 }
+

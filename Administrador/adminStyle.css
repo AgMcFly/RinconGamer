@@ -1,3 +1,5 @@
+
+
 .table-image{
     width: 150px;
     object-fit: cover;
@@ -13,5 +15,11 @@ display: -webkit-box;
 
 .fa-star{
     padding: 20px;
+}
+
+.boton-admin{
+position: relative;
+left: 650px;
+
 }
 

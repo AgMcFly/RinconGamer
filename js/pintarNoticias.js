@@ -1,0 +1,1 @@
+const noticias = JSON.parse(localStorage.getItem("noticias")) || [] 
