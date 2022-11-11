@@ -7,10 +7,10 @@
 
 .cuerpoNoticia{
     overflow: hidden;
-width:115px;
-display: -webkit-box;
--webkit-line-clamp: 4;
--webkit-box-orient: vertical;
+    width:115px;
+    display: -webkit-box;
+    -webkit-line-clamp: 4;
+    -webkit-box-orient: vertical;
 }
 
 .fa-star{
@@ -23,3 +23,6 @@ left: 650px;
 
 }
 
+.twd {
+    width: 200px;
+}

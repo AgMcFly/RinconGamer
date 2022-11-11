@@ -1,5 +1,5 @@
 const opcionesUsuarioHTML = document.getElementById("opciones-usuario")
-console.log(`dsadas`)
+
 function chequearLogin() {
     const usuarioLogeado = JSON.parse(localStorage.getItem("currentUser"));
     // opcionesUsuarioHTML.innerHTML="";
@@ -7,7 +7,10 @@ function chequearLogin() {
 if (usuarioLogeado){
     logged.innerHTML = `<a class="nav-link active" aria-current="page" onclick="logout()" href="#">
         Logout
-    </a>`
+    </a>`;
+    if(usuarioLogeado.role === 'ADMIN_ROLE') {
+        opcionesUsuarioHTML.innerHTML = ` <li class="nav-item"><a class="nav-link text-primary" href="/Administrador/adminIndex.html">Administrar Noticias</a></li>` + opcionesUsuarioHTML.innerHTML
+    }
 }
 else{
     logged.innerHTML = `

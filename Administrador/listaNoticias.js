@@ -15,15 +15,15 @@ function renderProductos() {
         <img class ="table-image" src= ${elem.imagen}></img>
          </td>
          <td>${elem.título}</td>
-        <td class ="cuerpoNoticia">${elem.descripción}</td>
+        <td class="twd"><div class ="cuerpoNoticia">${elem.descripción}</div></td>
         <td>${elem.categoría}</td>
-        <td>${elem.Género}</td>
+        <td>${elem.género}</td>
         <td>${
           elem.Favorito
             ? `<i class="fa-solid fa-star"></i>`
             : `<i class="fa-regular fa-star"></i>`
         }
-        </td>}
+        </td>
         <td>
         <div class="d-flex">
         <button class="btn btn-danger p-1 me-2" onclick="borrarNoticia(${index})"><i class="fa-solid fa-trash"></i></button>
@@ -47,19 +47,19 @@ cargarNoticiasForm.addEventListener("submit", (evt) => {
   //prevengo el comportamiento del formulario por defecto
   evt.preventDefault();
   const formEl = evt.target.elements;
-
+  console.log(formEl)
   let nuevaNoticia = {
     título: formEl.título.value,
     descripción: formEl.cuerpo.value,
     imagen: formEl.imagen.value,
     categoría: formEl.categoría.value,
-    Género: formEl.género.value,
-    Favorito: formEl.Favorito.checked,
+    género: formEl.género.value,
+    favorito: formEl.favorito.checked,
   };
-
-  if (editable) {
+  console.log(editable)
+  if(editable >= 0) {
     // idx
-   noticias[editable] = nuevaNoticia;
+    noticias[editable] = nuevaNoticia;
     console.log("entro al IF")
   }
   //sino pusheo la noticia
@@ -94,15 +94,16 @@ function borrarNoticia(idx) {
 //Función recibe un parámetro del elemento a editar
 function editarNoticia(idx) {
   const noticiaAEditar = noticias[idx];
+  console.log(noticiaAEditar)
   //Obtengo los inputs elementos del formulario
   const formEl = cargarNoticiasForm.elements;
   //Relleno los valores de los inputs con los valores a editar
   formEl.título.value = noticiaAEditar.título;
-  formEl.cuerpo.value = noticiaAEditar.cuerpo;
+  formEl.cuerpo.value = noticiaAEditar.descripción;
   formEl.imagen.value = noticiaAEditar.imagen;
   formEl.categoría.value = noticiaAEditar.categoría;
   formEl.género.value = noticiaAEditar.género;
-  formEl.Favorito.checked = noticiaAEditar.Favorito;
+  formEl.favorito.checked = noticiaAEditar.favorito;
 
   editable = idx
 }
