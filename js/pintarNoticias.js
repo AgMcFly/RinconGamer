@@ -1,9 +1,9 @@
-const noticias = JSON.parse(localStorage.getItem("noticias")) || [] 
+const noticiasPintar = JSON.parse(localStorage.getItem("noticias")) || [] 
 const noticiasPintadas = document.getElementById("noticiasSection")
 
 function noticiasPintadasHTML() {
     noticiasSection.innerHTML= ""
-    noticias.forEach((notic) => {
+    noticiasPintar.forEach((notic,index) => {
         noticiasSection.innerHTML += 
             `<div class="col-lg-6">
             <!-- Blog post-->
@@ -13,10 +13,11 @@ function noticiasPintadasHTML() {
                     <div class="small text-muted">6 Noviembre, 2022</div>
                     <h2 class="card-title h4">${notic.título}</h2>
                     <p class="card-text">${notic.descripción}</p>
-                    <a class="btn btn-primary" href="#!">Leer mas →</a>
+                    <a class="btn btn-primary" href="/paginaNoticias.html?id=${index}">Leer mas →</a>
                 </div>
             </div>`
     });
 }
+
 
 noticiasPintadasHTML()
