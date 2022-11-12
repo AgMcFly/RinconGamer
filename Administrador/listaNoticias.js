@@ -16,6 +16,7 @@ function renderProductos() {
          </td>
          <td>${elem.título}</td>
         <td class="twd"><div class ="cuerpoNoticia">${elem.descripción}</div></td>
+        <td>${elem.fecha}</td>
         <td>${elem.categoría}</td>
         <td>${elem.género}</td>
         <td>${
@@ -47,10 +48,11 @@ cargarNoticiasForm.addEventListener("submit", (evt) => {
   //prevengo el comportamiento del formulario por defecto
   evt.preventDefault();
   const formEl = evt.target.elements;
-  console.log(formEl)
+  console.dir(evt.target.elements)
   let nuevaNoticia = {
     título: formEl.título.value,
     descripción: formEl.cuerpo.value,
+    fecha: formEl.fecha.value,
     imagen: formEl.imagen.value,
     categoría: formEl.categoría.value,
     género: formEl.género.value,
@@ -107,4 +109,15 @@ function editarNoticia(idx) {
 
   editable = idx
 }
+
+
+
+// function fechaActual (){
+//   const decirFechaActual = new Date()
+//   const diaMes = fechaActual.getDate()
+//   const año = fechaActual.getFullYear()
+//   const mes = fechaActual.getMonth() + 1
+// }
+
+// fechaActual()
 
