@@ -260,6 +260,16 @@ h4, .h4 {
   }
 }
 
+@media (min-width:1200px){
+  .card-text{
+    overflow: hidden;
+    width: 300px;
+    display: -webkit-box;
+    -webkit-line-clamp: 4;
+    -webkit-box-orient: vertical;
+  }
+}
+
 h5, .h5 {
   font-size: 1.25rem;
 }
