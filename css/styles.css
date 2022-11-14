@@ -98,6 +98,8 @@ body {
   -webkit-box-orient: vertical;
 }
 
+.textoSliderPrincipal
+
 /* .text-404-contenedor{
   margin-left: 900px;
 } */
@@ -225,6 +227,36 @@ h4, .h4 {
 @media (min-width: 1200px) {
   h4, .h4 {
     font-size: 1.5rem;
+  }
+}
+
+@media (max-width:993px){
+  .card-text{
+    overflow: hidden;
+    width: 600px;
+    display: -webkit-box;
+    -webkit-line-clamp: 4;
+    -webkit-box-orient: vertical;
+  }
+}
+
+@media (max-width:768px){
+  .card-text{
+    overflow: hidden;
+    width: 400px;
+    display: -webkit-box;
+    -webkit-line-clamp: 4;
+    -webkit-box-orient: vertical;
+  }
+}
+
+@media (min-width:993px){
+  .card-text{
+    overflow: hidden;
+    width: 250px;
+    display: -webkit-box;
+    -webkit-line-clamp: 4;
+    -webkit-box-orient: vertical;
   }
 }
 
