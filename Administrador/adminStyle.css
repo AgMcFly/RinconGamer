@@ -1,4 +1,7 @@
-
+.adminBody{
+ background-color: #060610;
+ color: white;
+}
 
 .table-image{
     width: 150px;
@@ -24,5 +27,19 @@ left: 650px;
 }
 
 .twd {
-    width: 200px;
+    width:100px;
 }
+
+
+.twt{
+    width: 100px;
+}
+
+.cuerpoTitulo{
+    overflow: hidden;
+    width:115px;
+    display: -webkit-box;
+    -webkit-line-clamp: 4;
+    -webkit-box-orient: vertical;
+}
+

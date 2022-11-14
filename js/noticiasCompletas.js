@@ -12,7 +12,7 @@ function noticiasFull () {
             <img src="${not.imagen}" alt="" class="w-100">
         </div>
         <div class="col-6">
-        <h3 class="text-danger">Fecha</h3>
+        <h3 class="text-danger">${not.fecha}</h3>
         <h3 class="text-danger">${not.categoría}</h3>
         <p class="text-danger">${not.descripción}</p>
 

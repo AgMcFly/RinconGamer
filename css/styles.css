@@ -90,6 +90,26 @@ body {
   z-index: 10;
 }
 
+.card-text{
+  overflow: hidden;
+  width: 350px;
+  display: -webkit-box;
+  -webkit-line-clamp: 4;
+  -webkit-box-orient: vertical;
+}
+
+/* .text-404-contenedor{
+  margin-left: 900px;
+} */
+
+
+.youDied-404{
+display: block;
+margin: auto;
+width: 60%;
+margin-top: 100px;
+}
+
 .whatsapp-icon {
   width: 70px;
   height: 70px;

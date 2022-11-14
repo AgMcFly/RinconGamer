@@ -10,10 +10,10 @@ function noticiasPintadasHTML() {
             <div class="card mb-4">
                 <a href="#!"><img class="card-img-top" src="${notic.imagen}" alt="${notic.título}" /></a>
                 <div class="card-body">
-                    <div class="small text-muted">6 Noviembre, 2022</div>
+                    <div class="small text-muted">${notic.fecha}</div>
                     <h2 class="card-title h4">${notic.título}</h2>
-                    <p class="card-text">${notic.descripción}</p>
-                    <a class="btn btn-primary" href="/paginaNoticias.html?id=${index}">Leer mas →</a>
+                    <div class="card-text"><p>${notic.descripción}</p></div>
+                    <a class="btn btn-primary" href="/paginaNoticias.html?id=${index}">Leer más →</a>
                 </div>
             </div>`
     });
@@ -21,3 +21,5 @@ function noticiasPintadasHTML() {
 
 
 noticiasPintadasHTML()
+
+

@@ -9,7 +9,7 @@ if (usuarioLogeado){
         Logout
     </a>`;
     if(usuarioLogeado.role === 'ADMIN_ROLE') {
-        opcionesUsuarioHTML.innerHTML = ` <li class="nav-item"><a class="nav-link text-primary" href="/Administrador/adminIndex.html">Administrar Noticias</a></li>` + opcionesUsuarioHTML.innerHTML
+        opcionesUsuarioHTML.innerHTML = ` <li class="nav-item"><a class="nav-link text-primary" href=/Administrador/adminIndex.html"Administrar Noticias</a></li>` + opcionesUsuarioHTML.innerHTML
     }
 }
 else{

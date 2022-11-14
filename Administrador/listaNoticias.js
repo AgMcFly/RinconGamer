@@ -14,8 +14,10 @@ function renderProductos() {
         <td>
         <img class ="table-image" src= ${elem.imagen}></img>
          </td>
-         <td>${elem.título}</td>
+        // <td><a href="${elem.video}"></a></td>
+         <td><div class="cuerpoTitulo">${elem.título}</div></td>
         <td class="twd"><div class ="cuerpoNoticia">${elem.descripción}</div></td>
+        <td>${elem.fecha}</td>
         <td>${elem.categoría}</td>
         <td>${elem.género}</td>
         <td>${
@@ -47,11 +49,13 @@ cargarNoticiasForm.addEventListener("submit", (evt) => {
   //prevengo el comportamiento del formulario por defecto
   evt.preventDefault();
   const formEl = evt.target.elements;
-  console.log(formEl)
+  console.dir(evt.target.elements)
   let nuevaNoticia = {
     título: formEl.título.value,
     descripción: formEl.cuerpo.value,
+    fecha: formEl.fecha.value,
     imagen: formEl.imagen.value,
+    video: formEl.video.value,   
     categoría: formEl.categoría.value,
     género: formEl.género.value,
     favorito: formEl.favorito.checked,
@@ -107,4 +111,7 @@ function editarNoticia(idx) {
 
   editable = idx
 }
+
+
+
 
