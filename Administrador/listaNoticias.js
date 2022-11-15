@@ -14,7 +14,7 @@ function renderProductos() {
         <td>
         <img class ="table-image" src= ${elem.imagen}></img>
          </td>
-        // <td><a href="${elem.video}"></a></td>
+        <td><a href="${elem.video}"></a></td>
          <td><div class="cuerpoTitulo">${elem.título}</div></td>
         <td class="twd"><div class ="cuerpoNoticia">${elem.descripción}</div></td>
         <td>${elem.fecha}</td>
