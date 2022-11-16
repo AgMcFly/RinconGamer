@@ -4,7 +4,7 @@
 }
 
 .table-image{
-    width: 150px;
+    width: 200px;
     object-fit: cover;
 }
 
@@ -42,4 +42,3 @@ left: 650px;
     -webkit-line-clamp: 4;
     -webkit-box-orient: vertical;
 }
-
